@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+/*Utilities*/
+body {
+  background-color: hsl(0, 8%, 90%);
+}
+h6 {
+  opacity: 55%;
+}
+p {
+  opacity: 70%;
+}
+/*Container*/
+.container {
+  justify-content: center;
+  max-width: 1350px;
+  margin: 50px 0;
+  display: grid;
+  gap: 25px;
+  font-weight: 500;
+  font-family: "Barlow Semi Condensed";
+  color: #fff;
+}
+/*Cards*/
+.card {
+  width: 300px;
+  border-radius: 5px;
+  margin: 0 15px;
+  padding: 25px 35px;
+}
+
+.card .header {
+  display: flex;
+}
+.card .header .profile-img {
+  border-radius: 100px;
+  border: 2px solid #fff;
+  width: 32px;
+  height: 32px;
+}
+.card .header .user {
+  padding-left: 15px;
+}
+.card h2 {
+  padding-top: 15px;
+  font-size: 20px;
+  font-weight: 500;
+  width: 300px;
+  position: relative;
+  z-index: 2;
+}
+.card p {
+  font-size: 13px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  line-height: 1.2rem;
+  width: 250px;
+}
+
+.card-1 {
+  background: hsla(271, 70%, 39%, 0.863) url(/images/bg-pattern-quotation.svg)
+    no-repeat;
+  background-position: 95% 0%;
+}
+
+.card-2 {
+  background: hsl(217, 19%, 35%);
+}
+.card-3 {
+  background: hsl(0, 0%, 100%);
+  color: #000;
+}
+.card-4 {
+  background: hsl(219, 29%, 14%);
+}
+.card-5 {
+  color: #000;
+  background: hsl(0, 0%, 100%);
+}
+/*Footer*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/*Media Query*/
+@media (min-width: 700px) {
+  main {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  .container {
+    margin-top: 18vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .card {
+    margin: 0;
+    width: auto;
+  }
+  .card h2 {
+    width: auto;
+  }
+  .card p {
+    width: auto;
+  }
+  .card-1 {
+    grid-column: 1 / span 2;
+    background-position: 83% 0%;
+  }
+  .card-3 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .card-2 {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .card-4 {
+    grid-column: span 2;
+    grid-row: 2;
+  }
+  .card-5 {
+    height: auto;
+    width: auto;
+    grid-column: 4;
+    grid-row: span 2;
+  }
+}
